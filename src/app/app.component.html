@@ -1,0 +1,23 @@
+<div class="App">
+  <div class="topnav">
+  </div>
+  <label class="title"> Atlas Risk Versions </label>
+  <hr class="solid" />
+  <div class="tablecontainer">
+    <table *ngIf="atlasData" class="atlastable" border="1" cellspacing="0">
+      <thead>
+        <tr class="tableheading">
+          <th>REGION</th>
+          <th>ENVIRONMENT</th>
+          <th>MODULES</th>
+          <th>VERSION</th>
+        </tr>
+      </thead>
+      <tbody  >
+        <ng-container *ngFor="let d of atlasData;let i = index" >
+          <tr appRow [region]="d.region" [environment]="d.environment" [ind]="i"></tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

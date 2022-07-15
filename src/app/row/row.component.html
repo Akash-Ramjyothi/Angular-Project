@@ -1,0 +1,113 @@
+
+    <td class="region">{{region}}</td>
+    <td class="environment">
+        <div *ngFor="let e of environment">{{e.name}}</div>
+    </td>
+    <td class="modules">
+        <div id="accordion">
+            <div>Server</div>
+            <div class="content" id="myid">
+                <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
+                    <tr>
+                        <th>TYPE</th>
+                        <th>PROCESSINSTANCE</th>
+                        <th>LATEST_RUN</th>
+                    </tr>
+                    <tr *ngFor="let std of serverTableData0">
+                        <td>{{std.type}}</td>
+                        <td>{{std.processInstance}}</td>
+                        <td>{{std.latestrun}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>Coherence</div>
+            <div class="content" id="myid">
+                <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
+                    <tr>
+                        <th>TYPE</th>
+                        <th>PROCESSINSTANCE</th>
+                        <th>LATEST_RUN</th>
+                    </tr>
+                    <tr *ngFor="let ctd of coherenceTableData0">
+                        <td>{{ctd.type}}</td>
+                        <td>{{ctd.processInstance}}</td>
+                        <td>{{ctd.latestrun}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>UI</div>
+            <div class="content" id="myid">
+                <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
+                    <tr>
+                        <th>TYPE</th>
+                        <th>PROCESSINSTANCE</th>
+                        <th>LATEST_RUN</th>
+                    </tr>
+                    <tr *ngFor="let utd of uiTableData0">
+                        <td>{{utd.type}}</td>
+                        <td>{{utd.processInstance}}</td>
+                        <td>{{utd.latestrun}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="accordion_2">
+            <div>Server</div>
+            <div class="content" id="myid">
+                <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
+                    <tr>
+                        <th>TYPE</th>
+                        <th>PROCESSINSTANCE</th>
+                        <th>LATEST_RUN</th>
+                    </tr>
+                    <tr *ngFor="let std of serverTableData1">
+                        <td>{{std.type}}</td>
+                        <td>{{std.processInstance}}</td>
+                        <td>{{std.latestrun}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>Coherence</div>
+            <div class="content" id="myid">
+                <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
+                    <tr>
+                        <th>TYPE</th>
+                        <th>PROCESSINSTANCE</th>
+                        <th>LATEST_RUN</th>
+                    </tr>
+                    <tr *ngFor="let ctd of coherenceTableData1">
+                        <td>{{ctd.type}}</td>
+                        <td>{{ctd.processInstance}}</td>
+                        <td>{{ctd.latestrun}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>UI</div>
+            <div class="content" id="myid">
+                <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
+                    <tr>
+                        <th>TYPE</th>
+                        <th>PROCESSINSTANCE</th>
+                        <th>LATEST_RUN</th>
+                    </tr>
+                    <tr *ngFor="let utd of uiTableData1">
+                        <td>{{utd.type}}</td>
+                        <td>{{utd.processInstance}}</td>
+                        <td>{{utd.latestrun}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </td>
+    <td class="version">
+        <div *ngFor="let e of environment">
+            <div>{{e.data.Server.version}}</div>
+            <div>{{e.data.Coherence.version}}</div>
+            <div>{{e.data.UI.version}}</div>
+        </div>
+    </td>
