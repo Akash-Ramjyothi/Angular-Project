@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./row.component.scss']
 })
 export class RowComponent implements OnInit {
-
+  [key: string]: any;
   @Input() region!:any;
   @Input() environment!:any;
   @Input() ind!:number
@@ -18,6 +18,15 @@ export class RowComponent implements OnInit {
   serverTableData1!:any;
   coherenceTableData1!:any;
   uiTableData1!:any;
+
+  showServerTable0: boolean = false;
+  showCoherenceTable0: boolean = false;
+  showUiTable0: boolean = false;
+
+  showServerTable1: boolean = false;
+  showCoherenceTable1: boolean = false;
+  showUiTable1: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -29,6 +38,20 @@ export class RowComponent implements OnInit {
     this.serverTableData1 = this.environment[1].data.Server.tableData;
     this.coherenceTableData1 = this.environment[1].data.Coherence.tableData;
     this.uiTableData1 = this.environment[1].data.UI.tableData;
+  }
+
+  toggleRows0(tableVariable: string) {
+    this.showServerTable0 = false;
+    this.showCoherenceTable0 = false;
+    this.showUiTable0 = false;
+    this[tableVariable] = true;
+  }
+
+  toggleRows1(tableVariable: string) {
+    this.showServerTable1 = false;
+    this.showCoherenceTable1 = false;
+    this.showUiTable1 = false;
+    this[tableVariable] = true;
   }
 
 }
