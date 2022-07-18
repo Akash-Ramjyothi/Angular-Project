@@ -5,8 +5,9 @@
     </td>
     <td class="modules">
         <div id="accordion">
-            <div (click)="showServerTable0 = !showServerTable0">Server</div>
+            <div (click)="toggleRows0('showServerTable0')">Server</div>
             <div #getST0Height class="content" id="myid" [style.display]="showServerTable0 ? 'block' : 'none'" [style.maxHeight]="showServerTable0 ? getST0Height.scrollHeight + 'px' : '0px'">
+            <!-- <div class="content" id="myid" *ngIf="showServerTable0"> -->
                 <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
                     <tr>
                         <th>TYPE</th>
@@ -21,8 +22,9 @@
                 </table>
             </div>
 
-            <div (click)="showCoherenceTable0 = !showCoherenceTable0">Coherence</div>
+            <div (click)="toggleRows0('showCoherenceTable0')">Coherence</div>
             <div #getCT0Height class="content" id="myid" [style.display]="showCoherenceTable0 ? 'block' : 'none'" [style.maxHeight]="showCoherenceTable0 ? getCT0Height.scrollHeight + 'px' : '0px'" >
+            <!-- <div class="content" id="myid" *ngIf="showCoherenceTable0"> -->
                 <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
                     <tr>
                         <th>TYPE</th>
@@ -37,8 +39,9 @@
                 </table>
             </div>
 
-            <div (click)="showUiTable0 = !showUiTable0">UI</div>
+            <div (click)="toggleRows0('showUiTable0')">UI</div>
             <div #getUT0Height class="content" id="myid" [style.display]="showUiTable0 ? 'block' : 'none'" [style.maxHeight]="showUiTable0 ? getUT0Height.scrollHeight + 'px' : '0px'">
+            <!-- <div class="content" id="myid" *ngIf="showUiTable0"> -->
                 <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
                     <tr>
                         <th>TYPE</th>
@@ -55,8 +58,9 @@
         </div>
 
         <div id="accordion_2">
-            <div (click)="showServerTable1 = !showServerTable1">Server</div>
+            <div (click)="toggleRows1('showServerTable1')">Server</div>
             <div #getST1Height class="content" id="myid" [style.display]="showServerTable1 ? 'block' : 'none'" [style.maxHeight]="showServerTable1 ? getST1Height.scrollHeight + 'px' : '0px'">
+            <!-- <div class="content" id="myid" *ngIf="showServerTable1"> -->
                 <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
                     <tr>
                         <th>TYPE</th>
@@ -71,8 +75,9 @@
                 </table>
             </div>
 
-            <div (click)="showCoherenceTable1 = !showCoherenceTable1">Coherence</div>
+            <div (click)="toggleRows1('showCoherenceTable1')">Coherence</div>
             <div #getCT1Height class="content" id="myid" [style.display]="showCoherenceTable1 ? 'block' : 'none'" [style.maxHeight]="showCoherenceTable1 ? getCT1Height.scrollHeight + 'px' : '0px'">
+            <!-- <div class="content" id="myid" *ngIf="showCoherenceTable1"> -->
                 <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
                     <tr>
                         <th>TYPE</th>
@@ -87,8 +92,9 @@
                 </table>
             </div>
 
-            <div (click)="showUiTable1 = !showUiTable1">UI</div>
+            <div (click)="toggleRows1('showUiTable1')">UI</div>
             <div #getUT1Height class="content" id="myid" [style.display]="showUiTable1 ? 'block' : 'none'" [style.maxHeight]="showUiTable1 ? getUT1Height.scrollHeight + 'px' : '0px'">
+            <!-- <div class="content" id="myid" *ngIf="showUiTable1"> -->
                 <table class="tableresult" id="tableId" border="2" cellspacing="0" cellpadding="6">
                     <tr>
                         <th>TYPE</th>
